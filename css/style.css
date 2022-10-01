@@ -80,3 +80,13 @@ ul{
     font-family: "HGP創英角ｺﾞｼｯｸUB", "Hiragino Kaku Gothic Pro", "Meiryo";
     color: red;
 }
+footer{
+    width: 100vw;
+    /* background-color: #346e84; */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+
+    position: absolute;/*←絶対位置*/
+    bottom: 0; /*下に固定*/
+}
