@@ -84,6 +84,28 @@ ul{
     font-family: "HGP創英角ｺﾞｼｯｸUB", "Hiragino Kaku Gothic Pro", "Meiryo";
     text-align: center;
 }
+.nasa_test button {
+    display: inline-block;
+    max-width: 250px;
+    text-align: left;
+    border: 2px solid #ed7512;
+    font-size: 20px;
+    color: #ed7512;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: .4s;
+}  
+.nasa_test button:hover {
+    background-color: #ed7512;
+    border-color: #f9760b;
+    color: #FFF;
+}
+.nasa_test p{
+    font-size: 1.5vw;
+    text-shadow: 1px 0 5px #ed7512;
+}
 .nasa_link a{
     font-family: "HGP創英角ｺﾞｼｯｸUB", "Hiragino Kaku Gothic Pro", "Meiryo";
     color: red;
