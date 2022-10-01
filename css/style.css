@@ -10,6 +10,8 @@ body{
     background-size: cover;               /* 全画面 */
     background-attachment: fixed;         /* 固定 */
     background-position: center center;   /* 縦横中央 */
+
+    overflow-x: hidden;
 }
 .logo{
     text-align: center;
@@ -24,13 +26,13 @@ body{
 .header{
     z-index: 20;
     position: relative;
-    
+
     width: 600px;
     text-align: center;
     /*上下のマージンが0、左右がオート*/
     margin: 0 auto;
 }
-.header ul{
+/* .header ul{
     display: flex;
 }
 .header ul li{
@@ -43,7 +45,7 @@ body{
 }
 .header ul li a{
     display: block;
-}
+} */
 a{
     text-decoration: none;
     color: black;
@@ -51,13 +53,13 @@ a{
 ul{
     list-style-type: none;
 }
-.header_img{
+/* .header_img{
     text-align: center;
 }
 .header_img img{
     width: 70vw;
-}
-.container_movies h2{
+} */
+/* .container_movies h2{
     font-weight: 500;
     font-size: 24px;
     text-align: center;
@@ -74,7 +76,7 @@ ul{
 .movies_block{
     display: flex;
     justify-content: space-between;
-}
+} */
 .nasa_test{
     z-index: 30;
     position: relative;
