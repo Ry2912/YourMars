@@ -75,10 +75,10 @@ function test2(position) {
     const std_mars_array = [std_max_mars_temp,std_min_mars_temp,std_mars_press];
     //火星天気予報
     //APIでnow_は取得する
-    var now__max_earth_temp = maxtemp; //API
-    var now_min_earth_temp= mintemp; //API
-    var now_earth_press = press; //API
-    var now_earth_wind = maxwind; //API
+    var now__max_earth_temp = Number(maxtemp); //API
+    var now_min_earth_temp= Number(mintemp); //API
+    var now_earth_press = Number(press); //API
+    var now_earth_wind = Number(maxwind); //API
     var now_earth_array=[now__max_earth_temp,now_min_earth_temp,now_earth_press,now_earth_wind];
     var weathercast=[];
     for (let i = 0; i < 3; i++){
