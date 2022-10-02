@@ -9,8 +9,11 @@ function test2(position) {
 
     const base_url1="https://api.open-meteo.com/v1/forecast?";
     const base_url2 = "&hourly=surface_pressure&daily=temperature_2m_max,temperature_2m_min,windspeed_10m_max&timezone=Asia%2FTokyo";
+    const base_url3 = "&hourly=precipitation,cloudcover=Asia%2FTokyo";
+
     var url = base_url1 + "latitude=" + lat + "&"  + "longitude="+ lon + base_url2;
-    
+    //var url2 = base_url1 + "latitude=" + lat + "&"  + "longitude="+ lon + base_url3;
+
     var replaced_text;
     var data;
 
@@ -18,6 +21,8 @@ function test2(position) {
     var mintemp = 0;
     var press = 0;
     var maxwind = 0;
+
+    var wind_power = -1; //0:晴れ 1:弱い風 2:強い風 -1:error
 
     fetch(url).then(function(response) {
       return response.text();
@@ -82,11 +87,32 @@ function test2(position) {
         weathercast[i] = ((now_earth_array[i]-ave_earth_array[i]) / std_earth_array[i]) * std_mars_array[i] + ave_mars_array[i];
         }
         weathercast[3] = now_earth_wind;
-        console.log(weathercast);
+        
+        if (0 <= now_earth_wind <= 10){                        
+            //晴れ画像表示
+            wind_power = 0;
+        }
+        if (10 < now_earth_wind <= 20){
+            wind_power = 1;
+            //弱い風表示
+        }
+        if (20<now_earth_wind){
+            wind_power = 2
+            //強い風表示
+        }
+        console.log(wind_power);
         document.getElementById('maxtemp_m').innerHTML = weathercast[0].toFixed(1);
         document.getElementById('mintemp_m').innerHTML = weathercast[1].toFixed(1);
         document.getElementById('press_m').innerHTML = weathercast[2].toFixed(1);
         document.getElementById('maxwind_m').innerHTML = weathercast[3].toFixed(1); 
     });
+
+    // fetch(url2).then(function(response) {
+    //     return response.text2();
+    // }).then(function(text2) {
+    //       replaced_text = text.replace( /\r?\n|\[|]|:/g, ',' );
+    //       data = replaced_text.split(',');
+    // }
+  
 
 }
