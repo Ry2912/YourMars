@@ -20,18 +20,8 @@
         <button onclick="test()">位置情報を取得する</button>
         <p>
             [緯度, 経度] = [<span id="LatLon"></span>]<br>
-            <!-- [最大気温(℃)] = [<span id="maxtemp"></span>]<br>
-            [最小気温(℃)] = [<span id="mintemp"></span>]<br>
-            [気圧(hPa)] = [<span id="press"></span>]<br>
-            [風速(m/s)] = [<span id="maxwind"></span>] -->
         </p>
         <table>
-            <!-- <tr>
-                <th>お名前</th>
-                <th>特技</th>
-                <th>担当カラー</th>
-                <th>住所</th>
-            </tr> -->
             <tr>
                 <td class="first_row"></td>
                 <td>最高気温[℃]</td>
@@ -56,6 +46,11 @@
         </table>
         <h2>↓イメージをみる↓</h2>
         <div class = "nasa_link">
+            <!-- <script>
+                var tmp = document.getElementById('maxwind_m');
+                window.location.href = './panorama.html?=' + tmp;      
+            </script> -->
+
             <h1><a href="./panorama.html">パノラマ</a></h1>
         </div>
     </div>

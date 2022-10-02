@@ -1,3 +1,6 @@
+var wind_power;
+
+
 function test() {
     navigator.geolocation.getCurrentPosition(test2);
 }
@@ -22,7 +25,7 @@ function test2(position) {
     var press = 0;
     var maxwind = 0;
 
-    var wind_power = -1; //0:晴れ 1:弱い風 2:強い風 -1:error
+    //var wind_power; //0:晴れ 1:弱い風 2:強い風 -1:error
 
     fetch(url).then(function(response) {
       return response.text();
@@ -90,21 +93,24 @@ function test2(position) {
         
         if (0 <= now_earth_wind <= 10){                        
             //晴れ画像表示
-            wind_power = 0;
+            wind_power = "sunny";
         }
         if (10 < now_earth_wind <= 20){
-            wind_power = 1;
+            wind_power = "weak_wind";
             //弱い風表示
         }
-        if (20<now_earth_wind){
-            wind_power = 2
+        if (20 < now_earth_wind){
+            wind_power = "strong_wind";
             //強い風表示
-        }
+        }       
         console.log(wind_power);
+        
         document.getElementById('maxtemp_m').innerHTML = weathercast[0].toFixed(1);
         document.getElementById('mintemp_m').innerHTML = weathercast[1].toFixed(1);
         document.getElementById('press_m').innerHTML = weathercast[2].toFixed(1);
         document.getElementById('maxwind_m').innerHTML = weathercast[3].toFixed(1); 
+
+        //document.getElementById('for_panorama').innerHTML = wind_power;
     });
 
     // fetch(url2).then(function(response) {
@@ -113,6 +119,5 @@ function test2(position) {
     //       replaced_text = text.replace( /\r?\n|\[|]|:/g, ',' );
     //       data = replaced_text.split(',');
     // }
-  
-
 }
+

@@ -41,7 +41,21 @@ if ('ontouchstart' in window) {
     video.crossOrigin = 'anonymous';
     video.loop = true;
     video.muted = true;
-    video.src = 'img/video4.mp4';
+    
+    //video.src = 'img/video4.mp4';
+    // var weather = wind_power;
+
+    // //console.log(wind_power);
+
+    // if (weather == "sunny"){
+    //   video.src = "img/mars_0.mp4";
+    // }else if (weather == "weak_wind"){
+    //   video.src = "img/mars_1.mp4";
+    // }else{
+    //   video.src = "img/mars_2.mp4";
+    // }
+    video.src = "img/mars_1.mp4";
+
     video.setAttribute( 'webkit-playsinline', 'webkit-playsinline' );
     video.setAttribute( 'playsinline', 'playsinline' );
     video.setAttribute( 'muted', 'muted' );
