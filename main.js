@@ -56,6 +56,7 @@ if ('ontouchstart' in window) {
     }
     //video.src = "img/mars_1.mp4";
 
+    
     video.setAttribute( 'webkit-playsinline', 'webkit-playsinline' );
     video.setAttribute( 'playsinline', 'playsinline' );
     video.setAttribute( 'muted', 'muted' );
