@@ -1,6 +1,5 @@
 var wind_power;
 
-
 function test() {
     navigator.geolocation.getCurrentPosition(test2);
 }
@@ -111,6 +110,7 @@ function test2(position) {
         document.getElementById('maxwind_m').innerHTML = weathercast[3].toFixed(1); 
 
         //document.getElementById('for_panorama').innerHTML = wind_power;
+        sessionStorage.setItem("key", wind_power);
     });
 
     // fetch(url2).then(function(response) {
