@@ -45,7 +45,7 @@ function test2(position) {
         }
         document.getElementById('maxtemp').innerHTML = maxtemp;
         document.getElementById('mintemp').innerHTML = mintemp;
-        document.getElementById('press').innerHTML = press.toFixed(3);
+        document.getElementById('press').innerHTML = press.toFixed(1);
         document.getElementById('maxwind').innerHTML = maxwind; 
 
         //串本の平均
@@ -83,6 +83,10 @@ function test2(position) {
         }
         weathercast[3] = now_earth_wind;
         console.log(weathercast);
+        document.getElementById('maxtemp_m').innerHTML = weathercast[0].toFixed(1);
+        document.getElementById('mintemp_m').innerHTML = weathercast[1].toFixed(1);
+        document.getElementById('press_m').innerHTML = weathercast[2].toFixed(1);
+        document.getElementById('maxwind_m').innerHTML = weathercast[3].toFixed(1); 
     });
 
 }

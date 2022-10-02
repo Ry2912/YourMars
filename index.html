@@ -20,11 +20,40 @@
         <button onclick="test()">位置情報を取得する</button>
         <p>
             [緯度, 経度] = [<span id="LatLon"></span>]<br>
-            [最大気温(℃)] = [<span id="maxtemp"></span>]<br>
+            <!-- [最大気温(℃)] = [<span id="maxtemp"></span>]<br>
             [最小気温(℃)] = [<span id="mintemp"></span>]<br>
             [気圧(hPa)] = [<span id="press"></span>]<br>
-            [風速(m/s)] = [<span id="maxwind"></span>]
+            [風速(m/s)] = [<span id="maxwind"></span>] -->
         </p>
+        <table>
+            <!-- <tr>
+                <th>お名前</th>
+                <th>特技</th>
+                <th>担当カラー</th>
+                <th>住所</th>
+            </tr> -->
+            <tr>
+                <td class="first_row"></td>
+                <td>最高気温[℃]</td>
+                <td>最低気温[℃]</td>
+                <td>気圧[hPa]</td>
+                <td>風速[m/s]</td>
+            </tr>
+            <tr>
+                <td class="second_row">地球</td>
+                <td><span id="maxtemp"></span></td>
+                <td><span id="mintemp"></span></td>
+                <td><span id="press"></span></td>
+                <td><span id="maxwind"></span></td>
+            </tr>
+            <tr>
+                <td class="third_row">火星</td>
+                <td><span id="maxtemp_m"></td>
+                <td><span id="mintemp_m"></td>
+                <td><span id="press_m"></span></td>
+                <td><span id="maxwind_m"></span></td>
+            </tr>
+        </table>
         <h2>↓イメージをみる↓</h2>
         <div class = "nasa_link">
             <h1><a href="./panorama.html">パノラマ</a></h1>

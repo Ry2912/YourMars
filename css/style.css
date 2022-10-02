@@ -103,9 +103,51 @@ ul{
     color: #FFF;
 }
 .nasa_test p{
-    font-size: 1.5vw;
+    font-size: 1vw;
     text-shadow: 1px 0 5px #ed7512;
 }
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    font-size: 1vw;
+  }
+  
+  table tr{
+    border-bottom: solid 1px #eee;
+    cursor: pointer;
+  }
+  
+  table tr:hover{
+    background-color: black;
+  }
+  
+  table th,table td{
+    text-align: center;
+    width: 20%;
+    padding: 15px 0;
+  }
+  
+  table td.icon{
+    background-size: 35px;
+    background-position: left 5px center;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+  }
+  
+  /* table td.icon.first_row{
+    background-image: url(icon-bird.png)
+  } */
+  
+  /* table td.icon.second_row{
+    background-image: url(../img/icon_earth.png)
+  }
+  
+  table td.icon.third_row{
+    background-image: url(../img/icon_mars.png)
+  } */
+
 .nasa_link a{
     font-family: "HGP創英角ｺﾞｼｯｸUB", "Hiragino Kaku Gothic Pro", "Meiryo";
     color: red;
